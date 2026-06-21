@@ -5,6 +5,12 @@ const adminLogin = async (req, res) => {
     const { username, password } =
       req.body;
 
+      console.log("BODY USERNAME:", username);
+      console.log("BODY PASSWORD:", password);
+
+      console.log("ENV USERNAME:", process.env.ADMIN_USERNAME);
+      console.log("ENV PASSWORD:", process.env.ADMIN_PASSWORD);
+
     if (
       username !==
         process.env.ADMIN_USERNAME ||
